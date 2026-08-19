@@ -1,4 +1,4 @@
-// Approach:
+// Approach 1:
 // Insert the given value into the BST using recursion.
 // LeetCode guarantees that val does not already exist in the BST,
 // so no duplicate-value check is required.
@@ -37,5 +37,36 @@ class Solution {
 
         return root;
 
+    }
+}
+
+
+// Approach 2:
+// Recursively insert the value according to BST properties.
+// If root is null, create and return a new node.
+// If val is smaller, recursively insert into the left subtree.
+// Otherwise, recursively insert into the right subtree.
+// The returned node is attached back to the respective child.
+// LeetCode guarantees that val does not already exist in the BST.
+//
+// Time Complexity: O(h), where h is the height of the BST.
+// Space Complexity: O(h) due to recursion.
+
+
+class Solution {
+    public TreeNode insertIntoBST(TreeNode root, int val) {
+        if(root == null){
+            return new TreeNode(val);
+        }
+            if(val<root.val){
+                root.left = insertIntoBST(root.left,val);
+
+            }
+            else{
+                root.right = insertIntoBST(root.right,val);
+            }
+               
+        
+        return root;
     }
 }
