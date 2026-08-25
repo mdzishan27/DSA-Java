@@ -1,0 +1,140 @@
+/*
+ * Platform      : LeetCode
+ * Problem No.   : 2390
+ * Problem Name  : Removing Stars From a String
+ * Difficulty    : Medium
+ *
+ * Approach 1 : StringBuilder
+ * 1. Use a StringBuilder to store the characters that are not removed.
+ * 2. Traverse the string from left to right.
+ * 3. If the current character is a normal character, add it to
+ *    the StringBuilder.
+ * 4. If the current character is '*', remove the last character
+ *    from the StringBuilder because '*' removes the closest
+ *    non-star character to its left.
+ * 5. Continue until the entire string is processed.
+ * 6. Convert the StringBuilder to a String and return it.
+ *
+ * Time Complexity : O(N)
+ * Space Complexity: O(N)
+ *
+ * Concepts Used:
+ * - String
+ * - StringBuilder
+ * - Stack-like approach
+ *
+ * Key Learning:
+ * StringBuilder can be used like a stack:
+ * - append()  -> push
+ * - deleteCharAt(length - 1) -> pop
+ *
+ * This allows us to efficiently remove the most recent character
+ * whenever a '*' is encountered.
+ */
+
+
+class Solution {
+    public String removeStars(String s) {
+        StringBuilder sb = new StringBuilder();
+
+        for(int i=0; i<s.length(); i++){
+            char ch = s.charAt(i);
+
+            if(ch == '*' && sb.length() > 0){
+                sb.deleteCharAt(sb.length()-1);
+            } else{
+                sb.append(ch);
+            }
+        }
+
+        return sb.toString();
+    }
+}
+
+
+
+
+/*
+ * Platform      : LeetCode
+ * Problem No.   : 2390
+ * Problem Name  : Removing Stars From a String
+ * Difficulty    : Medium
+ *
+ * Approach 2: Stack
+ *
+ * Logic:
+ * 1. Traverse the string from left to right.
+ * 2. Use a Stack<Character> to store the characters that remain
+ *    after removing the stars.
+ * 3. If the current character is a normal character, push it
+ *    onto the stack.
+ * 4. If the current character is '*', pop the top character
+ *    from the stack because '*' removes the closest non-star
+ *    character to its left.
+ * 5. After processing the complete string, traverse the stack
+ *    and append its remaining characters to a StringBuilder.
+ * 6. Convert the StringBuilder to a String and return the result.
+ *
+ * Why Stack?
+ * The '*' operation always removes the most recently added
+ * character. This follows the LIFO (Last In, First Out) principle,
+ * which makes a Stack suitable for this problem.
+ *
+ * Stack Operations Used:
+ * - push() -> Add a character to the stack.
+ * - pop()  -> Remove the most recently added character.
+ * - size() -> Check whether the stack contains any character.
+ *
+ * Example:
+ * Input  : "leet**cod*e"
+ *
+ * Stack processing:
+ * l → [l]
+ * e → [l,e]
+ * e → [l,e,e]
+ * t → [l,e,e,t]
+ * * → [l,e,e]
+ * * → [l,e]
+ * c → [l,e,c]
+ * o → [l,e,c,o]
+ * d → [l,e,c,o,d]
+ * * → [l,e,c,o]
+ * e → [l,e,c,o,e]
+ *
+ * Result: "lecoe"
+ *
+ * Time Complexity : O(N)
+ * Space Complexity: O(N)
+ *
+ * Key Learning:
+ * Whenever a problem requires removing the most recently added
+ * element, think about the Stack / LIFO pattern.
+ */
+
+class Solution {
+    public String removeStars(String s) {
+        StringBuilder sb = new StringBuilder();
+
+        Stack<Character> st = new Stack<>();
+        for(int i=0; i<s.length(); i++){
+             
+            char ch = s.charAt(i);
+            if(ch == '*' && st.size() > 0){
+                st.pop();
+            }
+
+            else {
+                st.push(ch);
+            }
+            
+           
+        }
+
+        for(char ch : st){
+            sb.append(ch);
+
+        }
+
+        return sb.toString();
+    }
+}
