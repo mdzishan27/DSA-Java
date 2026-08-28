@@ -83,6 +83,96 @@ class Solution {
     } 
 }
 
+/*
+ 
+ * Approach 2:
+ * 1. Use Postorder DFS (Left -> Right -> Root) to validate the
+ *    tree from the bottom up.
+ * 2. For every subtree, return a Triplet containing:
+ *      - max     -> maximum value in the subtree
+ *      - min     -> minimum value in the subtree
+ *      - isBST   -> whether the subtree is a valid BST
+ * 3. Recursively get the Triplet for the left and right subtrees.
+ * 4. The current subtree is a valid BST only if:
+ *      - The left subtree is a BST.
+ *      - The right subtree is a BST.
+ *      - Maximum value in the left subtree < root.val.
+ *      - Minimum value in the right subtree > root.val.
+ * 5. Calculate the minimum and maximum values of the current
+ *    subtree and return them along with the isBST result.
+ *
+ * Base Case:
+ * For a null node:
+ *      max = Long.MIN_VALUE
+ *      min = Long.MAX_VALUE
+ *      isBST = true
+ *
+ * This allows the parent node to perform the BST comparisons
+ * without treating an empty subtree as invalid.
+ *
+ * Time Complexity : O(N)
+ * Space Complexity: O(H)
+ *   - Every node is visited once.
+ *   - H is the height of the tree due to recursion.
+ *
+ * Concepts Used:
+ * - Binary Search Tree
+ * - DFS
+ * - Postorder Traversal
+ * - Recursion
+ * - Custom Triplet Class
+ * - Minimum and Maximum Values
+ *
+ * Key Learning:
+ * Each recursive call returns all the information the parent
+ * node needs: the minimum value, maximum value, and whether the
+ * subtree is a valid BST.
+ *
+ * The condition:
+ *      lst.isBST && rst.isBST &&
+ *      (lst.max < root.val) &&
+ *      (rst.min > root.val)
+ *
+ * ensures that the entire subtree satisfies the BST property.
+ *
+ * Optimization:
+ * Unlike the global flag approach, the BST status is returned
+ * directly from each recursive call. Therefore, no global
+ * variable is required.
+ */
+
+class Triplet{
+    long max;
+    long min;
+    boolean isBST;
+    Triplet(long max,long min,boolean isBST){
+        this.max = max;
+        this.min = min;
+        this.isBST = isBST;
+    }
+}
+class Solution {
+    
+    public boolean isValidBST(TreeNode root) {
+        return maxMin(root).isBST;
+    }
+
+
+    Triplet maxMin(TreeNode root){
+        if(root == null) return new Triplet(Long.MIN_VALUE,Long.MAX_VALUE,true);
+        Triplet lst = maxMin(root.left);
+
+        Triplet rst = maxMin(root.right);
+
+        long max = Math.max(root.val,Math.max(lst.max,rst.max));
+        long min = Math.min(root.val,Math.min(lst.min,rst.min));
+
+        boolean isBST = lst.isBST && rst.isBST && (lst.max < root.val) && (rst.min > root.val);
+
+        return new Triplet(max,min,isBST);
+    } 
+}
+
 
 /*
  
