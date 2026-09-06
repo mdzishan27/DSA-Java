@@ -1,0 +1,69 @@
+/*
+Approach:
+
+1. Handle the edge cases first:
+   - If the list is empty or has only one node, return null.
+   - In both cases, deleting the middle leaves an empty list.
+
+2. Use three pointers:
+   - slow → moves one node at a time.
+   - fast → moves two nodes at a time.
+   - prev → keeps track of the node before slow.
+
+3. Move the pointers:
+      prev = slow;
+      slow = slow.next;
+      fast = fast.next.next;
+
+   - When fast reaches the end, slow will be pointing to the
+     middle node.
+   - prev will be pointing to the node just before the middle.
+
+4. Delete the middle node:
+      prev.next = slow.next;
+
+   - Instead of directly deleting slow, skip it by connecting
+     prev to slow.next.
+
+5. Return head because the first node of the list remains unchanged.
+
+Key Idea:
+Use the slow-fast pointer technique to find the middle node,
+while prev keeps track of the node before it. Once slow reaches
+the middle, skip slow using prev.next.
+
+Example:
+1 → 2 → 3 → 4 → 5
+
+slow = 3
+prev = 2
+
+prev.next = slow.next
+
+Result:
+1 → 2 → 4 → 5
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+*/
+
+
+
+class Solution {
+    public ListNode deleteMiddle(ListNode head) {
+        if(head == null || head.next == null) {
+            return null;
+        }
+        ListNode slow = head;
+        ListNode fast = head;
+        ListNode prev = null;
+
+        while(fast != null && fast.next != null){
+            prev = slow;
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        prev.next = slow.next;
+        return head;
+    }
+}
