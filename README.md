@@ -62,3 +62,15 @@ This repository is maintained to:
 ---
 
 ⭐ Feel free to explore the solutions and suggestions are always welcome!
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Array
+|  |
+| ------- |
+| [2091-removing-minimum-and-maximum-from-array](https://github.com/mdzishan27/DSA-Java/tree/master/2091-removing-minimum-and-maximum-from-array) |
+## Greedy
+|  |
+| ------- |
+| [2091-removing-minimum-and-maximum-from-array](https://github.com/mdzishan27/DSA-Java/tree/master/2091-removing-minimum-and-maximum-from-array) |
+<!---LeetCode Topics End-->
