@@ -68,9 +68,18 @@ This repository is maintained to:
 ## Array
 |  |
 | ------- |
+| [1464-maximum-product-of-two-elements-in-an-array](https://github.com/mdzishan27/DSA-Java/tree/master/1464-maximum-product-of-two-elements-in-an-array) |
 | [2091-removing-minimum-and-maximum-from-array](https://github.com/mdzishan27/DSA-Java/tree/master/2091-removing-minimum-and-maximum-from-array) |
 ## Greedy
 |  |
 | ------- |
 | [2091-removing-minimum-and-maximum-from-array](https://github.com/mdzishan27/DSA-Java/tree/master/2091-removing-minimum-and-maximum-from-array) |
+## Sorting
+|  |
+| ------- |
+| [1464-maximum-product-of-two-elements-in-an-array](https://github.com/mdzishan27/DSA-Java/tree/master/1464-maximum-product-of-two-elements-in-an-array) |
+## Heap (Priority Queue)
+|  |
+| ------- |
+| [1464-maximum-product-of-two-elements-in-an-array](https://github.com/mdzishan27/DSA-Java/tree/master/1464-maximum-product-of-two-elements-in-an-array) |
 <!---LeetCode Topics End-->
