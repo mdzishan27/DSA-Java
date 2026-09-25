@@ -66,3 +66,85 @@ class Solution {
         
     }
 }
+
+
+
+/*
+    Problem: Flatten Binary Tree to Linked List
+    LeetCode: 114
+    Difficulty: Medium
+    Approach: Morris-like Traversal
+
+    Intuition:
+    Convert the binary tree into a linked list using the right pointers.
+    The final order should follow preorder traversal:
+    root → left → right.
+
+    Approach:
+    1. Start from the root using curr.
+    2. If curr has no left subtree, simply move to curr.right.
+    3. If curr has a left subtree:
+       - Find the rightmost node (predecessor) of the left subtree.
+       - Connect the predecessor to curr.right so the original
+         right subtree is not lost.
+       - Move the left subtree to curr.right.
+       - Set curr.left = null.
+    4. Continue moving through curr.right until the tree is flattened.
+
+    Why find the predecessor?
+    The rightmost node of the left subtree is the last node visited
+    in the left part of preorder. We connect it to the original
+    right subtree so the right part comes after the left part.
+
+    Why:
+        pred.right = curr.right
+        curr.right = curr.left
+        curr.left = null
+
+    These three steps rearrange:
+        curr → left → ...    and    curr → right → ...
+    
+    into:
+        curr → left → ... → original right
+
+    Key Idea:
+    Find predecessor → connect it to right subtree →
+    move left subtree to right → remove left link.
+
+    Time: O(n)
+    Space: O(1)
+*/
+
+class Solution {
+    public void flatten(TreeNode root) {
+
+        if(root == null) return;
+        
+        TreeNode curr = root;
+
+        while(curr != null){
+            if(curr.left != null){  //pred nikal sakta hai
+               
+
+               TreeNode pred = curr.left;
+
+               while(pred.right != null)
+                pred = pred.right;
+
+            
+                pred.right = curr.right;
+                curr.right = curr.left;
+                curr.left = null;
+                curr = curr.right;
+
+                
+            }
+
+            else {
+                curr = curr.right; //pred nhi nikal sakta to aage badhao
+            }
+        }
+
+        
+    }
+}
