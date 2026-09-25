@@ -238,3 +238,99 @@ class Solution {
     }
 
 }
+
+
+
+/*
+    Problem: Validate Binary Search Tree
+    LeetCode: 98
+    Difficulty: Medium
+    Approach: Morris Inorder Traversal
+
+    Intuition:
+    The inorder traversal of a valid BST is always strictly increasing.
+    Instead of storing the complete inorder traversal in an ArrayList,
+    we only keep the previous visited value in prev.
+
+    Approach:
+    1. Use Morris Traversal to perform inorder traversal without
+       recursion or a stack.
+    2. Find the inorder predecessor of the current node.
+    3. Create a temporary link when visiting the left subtree.
+    4. When we come back, remove the temporary link and visit curr.
+    5. During every visit, compare curr.val with prev.
+    6. If curr.val <= prev, the inorder sequence is not increasing,
+       so the tree is not a valid BST.
+    7. Otherwise, update prev = curr.val and continue.
+
+    Why do we use prev?
+    In a normal inorder traversal, we could store every value
+    in an ArrayList and compare adjacent values.
+    Here, we only need the previous value, so prev replaces
+    the need for the ArrayList.
+
+    Why prev = Long.MIN_VALUE?
+    Node values can be negative, zero, or positive.
+    Long.MIN_VALUE is smaller than every possible int value,
+    so the first node can always be checked correctly.
+
+    Key Idea:
+    Inorder traversal of BST → strictly increasing values.
+
+    Time: O(n)
+    Space: O(1)
+*/
+
+class Solution {
+    
+    public boolean isValidBST(TreeNode root) {
+
+        if(root == null) return true;
+
+        long prev = Long.MIN_VALUE;
+       
+        TreeNode curr = root;
+
+        while(curr != null){
+            if(curr.left != null){
+               //find pred and do work
+
+               TreeNode pred = curr.left;
+
+               while(pred.right != null && pred.right != curr)
+                pred = pred.right;
+
+               if(pred.right == null){
+                  //link
+                  pred.right = curr;
+                  curr = curr.left;
+
+                }
+
+                else {
+                   // pred.right = curr // unlink and print
+                   pred.right = null;
+                   if(curr.val <= prev) return false;
+                   prev = curr.val;
+                   curr = curr.right;
+                }
+
+
+               
+            }
+
+            else {
+                if(curr.val <= prev) return false;
+                prev = curr.val;
+                curr = curr.right;
+            }
+        }
+
+        return true;
+
+    }
+
+
+    
+    
+}
