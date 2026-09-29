@@ -85,6 +85,7 @@ This repository is maintained to:
 ## String
 |  |
 | ------- |
+| [0290-word-pattern](https://github.com/mdzishan27/DSA-Java/tree/master/0290-word-pattern) |
 | [1190-reverse-substrings-between-each-pair-of-parentheses](https://github.com/mdzishan27/DSA-Java/tree/master/1190-reverse-substrings-between-each-pair-of-parentheses) |
 | [1614-maximum-nesting-depth-of-the-parentheses](https://github.com/mdzishan27/DSA-Java/tree/master/1614-maximum-nesting-depth-of-the-parentheses) |
 ## Stack
@@ -97,4 +98,8 @@ This repository is maintained to:
 | ------- |
 | [1190-reverse-substrings-between-each-pair-of-parentheses](https://github.com/mdzishan27/DSA-Java/tree/master/1190-reverse-substrings-between-each-pair-of-parentheses) |
 | [1614-maximum-nesting-depth-of-the-parentheses](https://github.com/mdzishan27/DSA-Java/tree/master/1614-maximum-nesting-depth-of-the-parentheses) |
+## Hash Table
+|  |
+| ------- |
+| [0290-word-pattern](https://github.com/mdzishan27/DSA-Java/tree/master/0290-word-pattern) |
 <!---LeetCode Topics End-->
