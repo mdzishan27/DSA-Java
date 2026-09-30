@@ -68,6 +68,7 @@ This repository is maintained to:
 ## Array
 |  |
 | ------- |
+| [0532-k-diff-pairs-in-an-array](https://github.com/mdzishan27/DSA-Java/tree/master/0532-k-diff-pairs-in-an-array) |
 | [1464-maximum-product-of-two-elements-in-an-array](https://github.com/mdzishan27/DSA-Java/tree/master/1464-maximum-product-of-two-elements-in-an-array) |
 | [2091-removing-minimum-and-maximum-from-array](https://github.com/mdzishan27/DSA-Java/tree/master/2091-removing-minimum-and-maximum-from-array) |
 ## Greedy
@@ -77,6 +78,7 @@ This repository is maintained to:
 ## Sorting
 |  |
 | ------- |
+| [0532-k-diff-pairs-in-an-array](https://github.com/mdzishan27/DSA-Java/tree/master/0532-k-diff-pairs-in-an-array) |
 | [1464-maximum-product-of-two-elements-in-an-array](https://github.com/mdzishan27/DSA-Java/tree/master/1464-maximum-product-of-two-elements-in-an-array) |
 ## Heap (Priority Queue)
 |  |
@@ -102,4 +104,13 @@ This repository is maintained to:
 |  |
 | ------- |
 | [0290-word-pattern](https://github.com/mdzishan27/DSA-Java/tree/master/0290-word-pattern) |
+| [0532-k-diff-pairs-in-an-array](https://github.com/mdzishan27/DSA-Java/tree/master/0532-k-diff-pairs-in-an-array) |
+## Two Pointers
+|  |
+| ------- |
+| [0532-k-diff-pairs-in-an-array](https://github.com/mdzishan27/DSA-Java/tree/master/0532-k-diff-pairs-in-an-array) |
+## Binary Search
+|  |
+| ------- |
+| [0532-k-diff-pairs-in-an-array](https://github.com/mdzishan27/DSA-Java/tree/master/0532-k-diff-pairs-in-an-array) |
 <!---LeetCode Topics End-->
