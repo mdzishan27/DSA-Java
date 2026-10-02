@@ -68,6 +68,7 @@ This repository is maintained to:
 ## Array
 |  |
 | ------- |
+| [0001-two-sum](https://github.com/mdzishan27/DSA-Java/tree/master/0001-two-sum) |
 | [0532-k-diff-pairs-in-an-array](https://github.com/mdzishan27/DSA-Java/tree/master/0532-k-diff-pairs-in-an-array) |
 | [1464-maximum-product-of-two-elements-in-an-array](https://github.com/mdzishan27/DSA-Java/tree/master/1464-maximum-product-of-two-elements-in-an-array) |
 | [2091-removing-minimum-and-maximum-from-array](https://github.com/mdzishan27/DSA-Java/tree/master/2091-removing-minimum-and-maximum-from-array) |
@@ -105,6 +106,7 @@ This repository is maintained to:
 ## Hash Table
 |  |
 | ------- |
+| [0001-two-sum](https://github.com/mdzishan27/DSA-Java/tree/master/0001-two-sum) |
 | [0290-word-pattern](https://github.com/mdzishan27/DSA-Java/tree/master/0290-word-pattern) |
 | [0532-k-diff-pairs-in-an-array](https://github.com/mdzishan27/DSA-Java/tree/master/0532-k-diff-pairs-in-an-array) |
 | [3731-find-missing-elements](https://github.com/mdzishan27/DSA-Java/tree/master/3731-find-missing-elements) |
