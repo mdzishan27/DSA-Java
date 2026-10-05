@@ -92,16 +92,19 @@ This repository is maintained to:
 |  |
 | ------- |
 | [0290-word-pattern](https://github.com/mdzishan27/DSA-Java/tree/master/0290-word-pattern) |
+| [0856-score-of-parentheses](https://github.com/mdzishan27/DSA-Java/tree/master/0856-score-of-parentheses) |
 | [1190-reverse-substrings-between-each-pair-of-parentheses](https://github.com/mdzishan27/DSA-Java/tree/master/1190-reverse-substrings-between-each-pair-of-parentheses) |
 | [1614-maximum-nesting-depth-of-the-parentheses](https://github.com/mdzishan27/DSA-Java/tree/master/1614-maximum-nesting-depth-of-the-parentheses) |
 ## Stack
 |  |
 | ------- |
+| [0856-score-of-parentheses](https://github.com/mdzishan27/DSA-Java/tree/master/0856-score-of-parentheses) |
 | [1190-reverse-substrings-between-each-pair-of-parentheses](https://github.com/mdzishan27/DSA-Java/tree/master/1190-reverse-substrings-between-each-pair-of-parentheses) |
 | [1614-maximum-nesting-depth-of-the-parentheses](https://github.com/mdzishan27/DSA-Java/tree/master/1614-maximum-nesting-depth-of-the-parentheses) |
 ## Bracket Sequences
 |  |
 | ------- |
+| [0856-score-of-parentheses](https://github.com/mdzishan27/DSA-Java/tree/master/0856-score-of-parentheses) |
 | [1190-reverse-substrings-between-each-pair-of-parentheses](https://github.com/mdzishan27/DSA-Java/tree/master/1190-reverse-substrings-between-each-pair-of-parentheses) |
 | [1614-maximum-nesting-depth-of-the-parentheses](https://github.com/mdzishan27/DSA-Java/tree/master/1614-maximum-nesting-depth-of-the-parentheses) |
 ## Hash Table
