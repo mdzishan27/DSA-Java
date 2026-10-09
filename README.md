@@ -74,6 +74,7 @@ This repository is maintained to:
 | [1207-unique-number-of-occurrences](https://github.com/mdzishan27/DSA-Java/tree/master/1207-unique-number-of-occurrences) |
 | [1464-maximum-product-of-two-elements-in-an-array](https://github.com/mdzishan27/DSA-Java/tree/master/1464-maximum-product-of-two-elements-in-an-array) |
 | [2091-removing-minimum-and-maximum-from-array](https://github.com/mdzishan27/DSA-Java/tree/master/2091-removing-minimum-and-maximum-from-array) |
+| [2094-finding-3-digit-even-numbers](https://github.com/mdzishan27/DSA-Java/tree/master/2094-finding-3-digit-even-numbers) |
 | [3731-find-missing-elements](https://github.com/mdzishan27/DSA-Java/tree/master/3731-find-missing-elements) |
 ## Greedy
 |  |
@@ -86,6 +87,7 @@ This repository is maintained to:
 | [0242-valid-anagram](https://github.com/mdzishan27/DSA-Java/tree/master/0242-valid-anagram) |
 | [0532-k-diff-pairs-in-an-array](https://github.com/mdzishan27/DSA-Java/tree/master/0532-k-diff-pairs-in-an-array) |
 | [1464-maximum-product-of-two-elements-in-an-array](https://github.com/mdzishan27/DSA-Java/tree/master/1464-maximum-product-of-two-elements-in-an-array) |
+| [2094-finding-3-digit-even-numbers](https://github.com/mdzishan27/DSA-Java/tree/master/2094-finding-3-digit-even-numbers) |
 | [3731-find-missing-elements](https://github.com/mdzishan27/DSA-Java/tree/master/3731-find-missing-elements) |
 ## Heap (Priority Queue)
 |  |
@@ -123,6 +125,7 @@ This repository is maintained to:
 | [0290-word-pattern](https://github.com/mdzishan27/DSA-Java/tree/master/0290-word-pattern) |
 | [0532-k-diff-pairs-in-an-array](https://github.com/mdzishan27/DSA-Java/tree/master/0532-k-diff-pairs-in-an-array) |
 | [1207-unique-number-of-occurrences](https://github.com/mdzishan27/DSA-Java/tree/master/1207-unique-number-of-occurrences) |
+| [2094-finding-3-digit-even-numbers](https://github.com/mdzishan27/DSA-Java/tree/master/2094-finding-3-digit-even-numbers) |
 | [3731-find-missing-elements](https://github.com/mdzishan27/DSA-Java/tree/master/3731-find-missing-elements) |
 ## Two Pointers
 |  |
@@ -136,4 +139,12 @@ This repository is maintained to:
 |  |
 | ------- |
 | [0128-longest-consecutive-sequence](https://github.com/mdzishan27/DSA-Java/tree/master/0128-longest-consecutive-sequence) |
+## Recursion
+|  |
+| ------- |
+| [2094-finding-3-digit-even-numbers](https://github.com/mdzishan27/DSA-Java/tree/master/2094-finding-3-digit-even-numbers) |
+## Enumeration
+|  |
+| ------- |
+| [2094-finding-3-digit-even-numbers](https://github.com/mdzishan27/DSA-Java/tree/master/2094-finding-3-digit-even-numbers) |
 <!---LeetCode Topics End-->
