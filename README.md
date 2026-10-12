@@ -96,6 +96,7 @@ This repository is maintained to:
 ## String
 |  |
 | ------- |
+| [0003-longest-substring-without-repeating-characters](https://github.com/mdzishan27/DSA-Java/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0242-valid-anagram](https://github.com/mdzishan27/DSA-Java/tree/master/0242-valid-anagram) |
 | [0290-word-pattern](https://github.com/mdzishan27/DSA-Java/tree/master/0290-word-pattern) |
 | [0856-score-of-parentheses](https://github.com/mdzishan27/DSA-Java/tree/master/0856-score-of-parentheses) |
@@ -120,6 +121,7 @@ This repository is maintained to:
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/mdzishan27/DSA-Java/tree/master/0001-two-sum) |
+| [0003-longest-substring-without-repeating-characters](https://github.com/mdzishan27/DSA-Java/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0128-longest-consecutive-sequence](https://github.com/mdzishan27/DSA-Java/tree/master/0128-longest-consecutive-sequence) |
 | [0242-valid-anagram](https://github.com/mdzishan27/DSA-Java/tree/master/0242-valid-anagram) |
 | [0290-word-pattern](https://github.com/mdzishan27/DSA-Java/tree/master/0290-word-pattern) |
@@ -147,4 +149,8 @@ This repository is maintained to:
 |  |
 | ------- |
 | [2094-finding-3-digit-even-numbers](https://github.com/mdzishan27/DSA-Java/tree/master/2094-finding-3-digit-even-numbers) |
+## Sliding Window
+|  |
+| ------- |
+| [0003-longest-substring-without-repeating-characters](https://github.com/mdzishan27/DSA-Java/tree/master/0003-longest-substring-without-repeating-characters) |
 <!---LeetCode Topics End-->
