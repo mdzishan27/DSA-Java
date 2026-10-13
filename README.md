@@ -73,6 +73,7 @@ This repository is maintained to:
 | [0532-k-diff-pairs-in-an-array](https://github.com/mdzishan27/DSA-Java/tree/master/0532-k-diff-pairs-in-an-array) |
 | [1207-unique-number-of-occurrences](https://github.com/mdzishan27/DSA-Java/tree/master/1207-unique-number-of-occurrences) |
 | [1464-maximum-product-of-two-elements-in-an-array](https://github.com/mdzishan27/DSA-Java/tree/master/1464-maximum-product-of-two-elements-in-an-array) |
+| [1497-check-if-array-pairs-are-divisible-by-k](https://github.com/mdzishan27/DSA-Java/tree/master/1497-check-if-array-pairs-are-divisible-by-k) |
 | [2091-removing-minimum-and-maximum-from-array](https://github.com/mdzishan27/DSA-Java/tree/master/2091-removing-minimum-and-maximum-from-array) |
 | [2094-finding-3-digit-even-numbers](https://github.com/mdzishan27/DSA-Java/tree/master/2094-finding-3-digit-even-numbers) |
 | [3731-find-missing-elements](https://github.com/mdzishan27/DSA-Java/tree/master/3731-find-missing-elements) |
@@ -127,6 +128,7 @@ This repository is maintained to:
 | [0290-word-pattern](https://github.com/mdzishan27/DSA-Java/tree/master/0290-word-pattern) |
 | [0532-k-diff-pairs-in-an-array](https://github.com/mdzishan27/DSA-Java/tree/master/0532-k-diff-pairs-in-an-array) |
 | [1207-unique-number-of-occurrences](https://github.com/mdzishan27/DSA-Java/tree/master/1207-unique-number-of-occurrences) |
+| [1497-check-if-array-pairs-are-divisible-by-k](https://github.com/mdzishan27/DSA-Java/tree/master/1497-check-if-array-pairs-are-divisible-by-k) |
 | [2094-finding-3-digit-even-numbers](https://github.com/mdzishan27/DSA-Java/tree/master/2094-finding-3-digit-even-numbers) |
 | [3731-find-missing-elements](https://github.com/mdzishan27/DSA-Java/tree/master/3731-find-missing-elements) |
 ## Two Pointers
@@ -153,4 +155,8 @@ This repository is maintained to:
 |  |
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/mdzishan27/DSA-Java/tree/master/0003-longest-substring-without-repeating-characters) |
+## Counting
+|  |
+| ------- |
+| [1497-check-if-array-pairs-are-divisible-by-k](https://github.com/mdzishan27/DSA-Java/tree/master/1497-check-if-array-pairs-are-divisible-by-k) |
 <!---LeetCode Topics End-->
