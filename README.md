@@ -69,6 +69,7 @@ This repository is maintained to:
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/mdzishan27/DSA-Java/tree/master/0001-two-sum) |
+| [0049-group-anagrams](https://github.com/mdzishan27/DSA-Java/tree/master/0049-group-anagrams) |
 | [0128-longest-consecutive-sequence](https://github.com/mdzishan27/DSA-Java/tree/master/0128-longest-consecutive-sequence) |
 | [0532-k-diff-pairs-in-an-array](https://github.com/mdzishan27/DSA-Java/tree/master/0532-k-diff-pairs-in-an-array) |
 | [1207-unique-number-of-occurrences](https://github.com/mdzishan27/DSA-Java/tree/master/1207-unique-number-of-occurrences) |
@@ -85,6 +86,7 @@ This repository is maintained to:
 ## Sorting
 |  |
 | ------- |
+| [0049-group-anagrams](https://github.com/mdzishan27/DSA-Java/tree/master/0049-group-anagrams) |
 | [0242-valid-anagram](https://github.com/mdzishan27/DSA-Java/tree/master/0242-valid-anagram) |
 | [0532-k-diff-pairs-in-an-array](https://github.com/mdzishan27/DSA-Java/tree/master/0532-k-diff-pairs-in-an-array) |
 | [1464-maximum-product-of-two-elements-in-an-array](https://github.com/mdzishan27/DSA-Java/tree/master/1464-maximum-product-of-two-elements-in-an-array) |
@@ -98,6 +100,7 @@ This repository is maintained to:
 |  |
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/mdzishan27/DSA-Java/tree/master/0003-longest-substring-without-repeating-characters) |
+| [0049-group-anagrams](https://github.com/mdzishan27/DSA-Java/tree/master/0049-group-anagrams) |
 | [0242-valid-anagram](https://github.com/mdzishan27/DSA-Java/tree/master/0242-valid-anagram) |
 | [0290-word-pattern](https://github.com/mdzishan27/DSA-Java/tree/master/0290-word-pattern) |
 | [0856-score-of-parentheses](https://github.com/mdzishan27/DSA-Java/tree/master/0856-score-of-parentheses) |
@@ -123,6 +126,7 @@ This repository is maintained to:
 | ------- |
 | [0001-two-sum](https://github.com/mdzishan27/DSA-Java/tree/master/0001-two-sum) |
 | [0003-longest-substring-without-repeating-characters](https://github.com/mdzishan27/DSA-Java/tree/master/0003-longest-substring-without-repeating-characters) |
+| [0049-group-anagrams](https://github.com/mdzishan27/DSA-Java/tree/master/0049-group-anagrams) |
 | [0128-longest-consecutive-sequence](https://github.com/mdzishan27/DSA-Java/tree/master/0128-longest-consecutive-sequence) |
 | [0242-valid-anagram](https://github.com/mdzishan27/DSA-Java/tree/master/0242-valid-anagram) |
 | [0290-word-pattern](https://github.com/mdzishan27/DSA-Java/tree/master/0290-word-pattern) |
