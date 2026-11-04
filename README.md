@@ -72,6 +72,7 @@ This repository is maintained to:
 | [0049-group-anagrams](https://github.com/mdzishan27/DSA-Java/tree/master/0049-group-anagrams) |
 | [0128-longest-consecutive-sequence](https://github.com/mdzishan27/DSA-Java/tree/master/0128-longest-consecutive-sequence) |
 | [0215-kth-largest-element-in-an-array](https://github.com/mdzishan27/DSA-Java/tree/master/0215-kth-largest-element-in-an-array) |
+| [0453-minimum-moves-to-equal-array-elements](https://github.com/mdzishan27/DSA-Java/tree/master/0453-minimum-moves-to-equal-array-elements) |
 | [0532-k-diff-pairs-in-an-array](https://github.com/mdzishan27/DSA-Java/tree/master/0532-k-diff-pairs-in-an-array) |
 | [1207-unique-number-of-occurrences](https://github.com/mdzishan27/DSA-Java/tree/master/1207-unique-number-of-occurrences) |
 | [1464-maximum-product-of-two-elements-in-an-array](https://github.com/mdzishan27/DSA-Java/tree/master/1464-maximum-product-of-two-elements-in-an-array) |
@@ -174,4 +175,8 @@ This repository is maintained to:
 |  |
 | ------- |
 | [0215-kth-largest-element-in-an-array](https://github.com/mdzishan27/DSA-Java/tree/master/0215-kth-largest-element-in-an-array) |
+## Math
+|  |
+| ------- |
+| [0453-minimum-moves-to-equal-array-elements](https://github.com/mdzishan27/DSA-Java/tree/master/0453-minimum-moves-to-equal-array-elements) |
 <!---LeetCode Topics End-->
