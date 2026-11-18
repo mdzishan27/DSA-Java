@@ -106,3 +106,59 @@ class Solution {
         return pair(n,dp); 
     }
 }
+
+
+
+/*
+Problem: Friends Pairing Problem
+Approach: Tabulation (Bottom-Up Dynamic Programming)
+
+Intuition:
+- Each friend has two choices:
+  1. Stay single.
+  2. Pair up with any one of the remaining friends.
+
+Approach:
+1. Create a dp[] array of size n+1, where dp[i] represents the number of ways to pair i friends.
+2. Initialize the base cases:
+   - dp[1] = 1: One friend can only remain single.
+   - dp[2] = 2: Two friends can either stay single separately or pair together.
+3. Iterate from i = 3 to n and calculate the number of ways:
+
+   dp[i] = dp[i-1] + (i-1) * dp[i-2];
+
+4. Why this formula?
+   - If the current friend stays single, the remaining (i-1) friends can be paired in dp[i-1] ways.
+   - If the current friend pairs with someone, there are (i-1) choices for their partner. The remaining (i-2) friends can be paired in dp[i-2] ways.
+5. Add both possibilities to get the total number of ways for i friends.
+
+Why Tabulation?
+- We solve smaller subproblems first and store their results in the dp[] array.
+- This avoids recalculating the same subproblems and eliminates recursion overhead.
+
+Time Complexity: O(n)
+- We iterate from 3 to n, performing constant-time operations in each iteration.
+
+Space Complexity: O(n)
+- We use a dp[] array of size n+1 to store the results of subproblems.
+*/
+
+class Solution {
+    
+    public int pair(int n){
+        
+        int[] dp = new int[n+1];
+        dp[1] = 1;
+        if(n > 1) dp[2] = 2;
+        
+        for(int i=3; i<=n; i++){
+            dp[i] = dp[i-1] + (i-1)*dp[i-2];
+        }
+        
+        return dp[n];
+    }
+    
+    public int countFriendsPairings(int n) {
+        return pair(n); 
+    }
+}
