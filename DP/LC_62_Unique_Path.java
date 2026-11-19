@@ -117,3 +117,72 @@ class Solution {
         return dp[row][col] = rightWays + downWays;
     }
 }
+
+
+
+
+/*
+Problem: Unique Paths
+Difficulty: Medium
+Approach: Tabulation (Bottom-Up DP)
+
+Intuition:
+We are given an m x n grid, and we need to find the number of unique paths from the top-left cell (0,0) to the bottom-right cell (m-1,n-1).
+
+At every cell, we can move only in two directions: Right or Down.
+
+Approach: Tabulation
+1. Create a DP Array:
+   - Create a 2D DP array of size m x n.
+   - Each cell dp[i][j] stores the number of unique paths to reach that particular cell.
+
+2. Initialize Base Cases:
+   - Set the first row and first column to 1.
+   - This is because there is only one possible way to reach any cell in the first row (moving right).
+   - Similarly, there is only one possible way to reach any cell in the first column (moving down).
+
+3. Build the DP Table:
+   - Traverse the grid using nested loops, starting from (0,0).
+   - For every cell except the first row and first column, calculate the number of paths using:
+     a) dp[i][j-1]: Number of ways to reach the current cell from the left.
+     b) dp[i-1][j]: Number of ways to reach the current cell from above.
+
+4. Calculate and Store:
+   - Add the paths from the left and above to get the total number of unique paths.
+   - Store the result in dp[i][j].
+
+5. Return the Result:
+   - The bottom-right cell dp[m-1][n-1] contains the total number of unique paths.
+
+Recurrence Relation:
+   dp[i][j] = dp[i][j-1] + dp[i-1][j]
+
+Why and How:
+   - Tabulation solves smaller subproblems first and uses their results to calculate larger subproblems.
+   - Since every cell depends only on the cell above and the cell to its left, we traverse the grid from top-left to bottom-right.
+   - This avoids repeated calculations and eliminates recursion.
+
+Time Complexity: O(m * n)
+   - We visit every cell of the grid exactly once.
+
+Space Complexity: O(m * n)
+   - The 2D DP array stores the number of unique paths for every cell.
+*/
+
+class Solution {
+    public int uniquePaths(int m, int n) {
+       int[][] dp = new int[m][n];
+
+       for(int i=0; i<m; i++){
+          for(int j=0; j<n; j++){
+               if(i == 0 || j == 0) dp[i][j] = 1;
+               else dp[i][j] = dp[i][j-1] + dp[i-1][j];
+            }
+        }
+
+        return dp[m-1][n-1];
+    }
+
+   
+    
+}
