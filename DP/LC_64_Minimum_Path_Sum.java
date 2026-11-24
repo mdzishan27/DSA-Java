@@ -139,3 +139,75 @@ class Solution {
         
     }
 }
+
+
+
+/*
+Problem: Minimum Path Sum (LeetCode 64)
+Difficulty: Medium
+
+Intuition:
+- We need to find the minimum sum of a path from the top-left corner to the bottom-right corner.
+- We can move only right or down.
+- Instead of exploring every possible path using recursion, we use a 2D DP array to store the minimum path sum required to reach each cell.
+
+Approach: Tabulation (Bottom-Up DP)
+1. Create a 2D dp array of size m x n because we need to store the minimum path sum for every cell.
+2. Start traversing the grid from (0, 0) because we calculate the minimum path sum from the top-left corner towards the destination.
+3. Handle the starting cell: if i == 0 and j == 0, store grid[0][0] directly because it is the starting point and has no previous cell.
+4. For the first row (i == 0), add the current cell value to dp[i][j-1] because we can only reach these cells by moving right. This builds a cumulative sum from left to right.
+5. For the first column (j == 0), add the current cell value to dp[i-1][j] because we can only reach these cells by moving down. This builds a cumulative sum from top to bottom.
+6. For all other cells, consider the minimum path sum from the top (dp[i-1][j]) and left (dp[i][j-1]) because these are the only two possible ways to reach the current cell.
+7. Add grid[i][j] to the minimum of both previous path sums because we must include the current cell's value in the total path sum.
+8. Store the calculated result in dp[i][j] because it represents the minimum path sum required to reach the current cell.
+9. Finally, return dp[m-1][n-1] because it contains the minimum path sum to reach the bottom-right corner.
+
+Why Tabulation?
+- Instead of using recursion and calculating the same subproblems repeatedly, we solve smaller subproblems first and store their results in the DP array.
+- Each cell depends only on its top and left cells, which are already calculated because we traverse the grid from top to bottom and left to right.
+
+Why Cumulative Sum for First Row and Column?
+- The first row can only be reached by moving right, so we keep adding the previous cell's path sum.
+- The first column can only be reached by moving down, so we keep adding the cell above.
+- This handles the boundary conditions where only one movement direction is possible.
+
+Key Idea:
+- Store the minimum path sum required to reach each cell.
+- Use cumulative sums for the first row and first column.
+- For every other cell, choose the minimum path sum from the top or left and add the current cell's value.
+- The bottom-right DP cell gives the final minimum path sum.
+
+Time Complexity: O(m * n)
+- We traverse every cell of the grid exactly once.
+- Each cell performs constant-time operations.
+
+Space Complexity: O(m * n)
+- The 2D DP array stores the minimum path sum for every cell.
+*/
+
+class Solution {
+    public int minPathSum(int[][] grid) {
+        int m = grid.length;
+        int n = grid[0].length;
+        
+        int[][] dp = new int[m][n];
+
+        for(int i=0; i<m; i++){
+            for(int j=0; j<n; j++){
+               if(i==0 && j==0) dp[i][j] = grid[i][j];
+               else if(i == 0) dp[i][j] = grid[i][j] + dp[i][j-1];
+               else if(j == 0) dp[i][j] = grid[i][j] + dp[i-1][j];
+               else dp[i][j] = grid[i][j] + Math.min(dp[i][j-1],dp[i-1][j]);
+
+            }
+        }
+
+        return dp[m-1][n-1];
+       
+    }
+
+    
+
+        
+    
+}
