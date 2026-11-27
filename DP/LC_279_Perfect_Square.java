@@ -202,3 +202,74 @@ class Solution {
         return minSquares(n,dp);
     }
 }
+
+/*
+Problem: Perfect Squares (LeetCode 279)
+Difficulty: Medium
+
+Intuition:
+- We need to find the minimum number of perfect squares whose sum equals n.
+- In the previous Memoization approach, we recursively selected perfect squares and calculated the minimum count for the remaining value.
+- We can solve the same problem using Tabulation by storing the answers for smaller values first and using them to calculate larger values.
+
+Approach 4: Tabulation (Bottom-Up DP)
+1. Create a dp array of size n + 1 because we need to store the minimum number of perfect squares required for every value from 0 to n.
+2. Traverse from i = 1 to n because we calculate the answers in increasing order, ensuring that the smaller subproblems are already solved.
+3. Check whether i is a perfect square using isPerfect(). If it is, set dp[i] = 1 because only one perfect square is needed to represent it.
+4. Otherwise, initialize min = Integer.MAX_VALUE to store the minimum number of perfect squares required for the current value.
+5. Run a loop from j = 1 while j * j <= i because we only need to consider perfect squares that are less than or equal to i.
+6. For every perfect square j * j, calculate dp[j * j] + dp[i - j * j] because we divide the current value into the selected perfect square and the remaining value.
+7. Update min using Math.min() because we need the minimum number of perfect squares among all possible choices.
+8. Store the minimum result in dp[i] because it represents the minimum number of perfect squares required to form i.
+9. After calculating all values up to n, return dp[n] because it contains the final minimum count.
+
+Why Tabulation?
+- In the previous Memoization approach, we used recursion to solve smaller subproblems and stored their results in the dp array.
+- Here, we calculate the same subproblems iteratively from smaller values to larger values.
+- This removes recursion and avoids the recursive call stack.
+
+Key Idea:
+- If i is already a perfect square, dp[i] = 1.
+- Otherwise, try every perfect square j * j that can be subtracted from i.
+- Add the result for the selected perfect square and the remaining value.
+- Choose the minimum count and store it in dp[i].
+
+Time Complexity: O(n * sqrt(n))
+- The outer loop runs from 1 to n.
+- For each value, the inner loop checks perfect squares up to that value, taking O(sqrt(n)) time.
+- Therefore, the overall time complexity is O(n * sqrt(n)).
+
+Space Complexity: O(n)
+- The dp array requires O(n) space.
+- No recursion stack is used.
+*/
+
+class Solution {
+    public boolean isPerfect(int n){
+           
+        int sqrt = (int)(Math.sqrt(n));
+
+        return (sqrt*sqrt == n);
+    }
+
+    public int numSquares(int n) {
+        int[] dp = new int[n+1];
+        for(int i=1; i<=n; i++){
+            if(isPerfect(i)) dp[i] = 1;
+
+            else {
+
+                int min = Integer.MAX_VALUE;
+
+                for(int j=1; j*j<=i; j++){
+                    int count = dp[j*j] + dp[i-j*j];
+                    min = Math.min(min,count);
+                }
+
+                dp[i] = min;
+            }
+        }
+
+        return dp[n];
+    }
+}
