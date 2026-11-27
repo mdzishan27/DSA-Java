@@ -126,3 +126,79 @@ class Solution {
         return minSquares(n,dp);
     }
 }
+
+
+
+
+/*
+Problem: Perfect Squares (LeetCode 279)
+Difficulty: Medium
+
+Intuition:
+- We need to find the minimum number of perfect squares whose sum equals n.
+- In the previous approach, we tried every possible split of n into two parts.
+- We can improve this by considering only perfect squares because each selected part must be a perfect square.
+
+Approach 3: Optimized Memoization
+1. Create an isPerfect() function to check whether a number is a perfect square by calculating its square root and checking whether sqrt * sqrt == n.
+2. Create a dp array of size n + 1 and initialize it with -1 because we need to store the minimum number of perfect squares required for different values of n.
+3. Create a recursive function minSquares(n, dp) that returns the minimum number of perfect squares required to represent n.
+4. First, check whether n is a perfect square. If it is, return 1 because only one perfect square is required.
+5. Check dp[n] before making recursive calls. If it is not -1, return the stored result because that subproblem has already been calculated.
+6. Initialize min = Integer.MAX_VALUE to store the minimum number of perfect squares required.
+7. Run a loop from i = 1 while i * i <= n because we only need to consider perfect squares smaller than or equal to n.
+8. For each perfect square i * i, calculate the number of perfect squares required for the remaining value (n - i * i) using recursion.
+9. Add minSquares(i * i, dp) and minSquares(n - i * i, dp) because we are dividing n into the selected perfect square and the remaining value.
+10. Update min using Math.min() because we need the minimum count among all possible perfect-square choices.
+11. Store the calculated result in dp[n] because the same subproblem may be needed again during recursion.
+12. Return minSquares(n, dp) from the main function to get the minimum number of perfect squares.
+
+Why Optimized Memoization?
+- In the previous approach, we checked every possible split from 1 to n / 2.
+- Here, we only consider perfect squares (1, 4, 9, 16, ...) because these are the valid numbers we can use.
+- This reduces the number of choices considered in each recursive call.
+
+Key Idea:
+- If n is already a perfect square, return 1.
+- Otherwise, try subtracting every possible perfect square from n.
+- Recursively calculate the minimum number of perfect squares required for the remaining value.
+- Store previously calculated results in dp to avoid repeated calculations.
+
+Time Complexity: O(n * sqrt(n))
+- There are O(n) possible subproblems.
+- For each subproblem, we check perfect squares up to n, resulting in O(sqrt(n)) iterations.
+- Memoization ensures each subproblem is calculated only once.
+
+Space Complexity: O(n)
+- The dp array requires O(n) space.
+- The recursion call stack can grow up to O(n) in the worst case.
+*/
+
+class Solution {
+    public boolean isPerfect(int n){
+           
+        int sqrt = (int)(Math.sqrt(n));
+
+        return (sqrt*sqrt == n);
+    }
+
+    public int minSquares(int n,int[] dp) {
+        if(isPerfect(n)) return 1;
+
+        if(dp[n] != -1) return dp[n];
+        int min = Integer.MAX_VALUE;
+
+        for(int i=1; i*i<=n; i++){
+            int count = minSquares(i*i,dp) + minSquares(n-i*i,dp);
+            min = Math.min(min,count);
+        }
+
+        return dp[n] = min;
+    }
+    public int numSquares(int n) {
+        int[] dp = new int[n+1];
+        Arrays.fill(dp,-1);
+
+        return minSquares(n,dp);
+    }
+}
